@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url(normalize.css);
+
+/* Added roots to make it easier to add fonts and text colors */
+:root {
+   --col1: #cddfc3;
+   --col2: #537C6A;
+   --col3: #16161a;
+   --heading: "Germania One", system-ui;
+   --bodytext: "Lora", serif;
+}
+/* Add image to background*/
+body {
+   font-family: var(--bodytext);
+   background-color: var(--col2);
+   background-image: url(Background2.png);
+   background-size: cover;
+   position: relative;
+   background-repeat: no-repeat;
+}
+
+/* To remove the undeline from abbrivated words */
+abbr {
+   text-decoration: none;
+}
+
+/* Properties for main Heading */
+h1 {
+   font-family: var(--heading);
+   font-size: 4rem;
+   font-weight: 200;
+   color: var(--col1);
+   padding: .8em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+   position: relative;
+   left: 22%;
+   text-shadow: 0 0 30px #f0ffe8;
+   background-image: url(ornate-design-01.png);
+   background-position: center bottom;
+   background-size: 50%;
+   background-repeat: no-repeat;
+   animation-name: colorswap;
+   animation-duration: 15s;
+   animation-iteration-count: infinite;
+}
+
+/* Added animation to which changes color of H1 */
+@keyframes colorswap {
+   0% {
+      color: lightblue;
+      text-shadow: rgb(57, 71, 76);
+   }
+
+   50% {
+      color: purple;
+      text-shadow: rgb(33, 0, 33);
+   }
+
+   75% {
+      color: cadetblue;
+      text-shadow: rgb(28, 47, 47);
+   }
+
+   100% {
+      color: #cddfc3;
+      text-shadow: #282c27;
+   }
+}
+
+h2 {
+   font-family: var(--bodytext);
+   color: var(--col1);
+   font-size: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-shadow: 0 0 30px #f0ffe8;
+}
+
+.intro h2 abbr {
+   text-decoration: none;
+   padding: 0 .4em;
+}
+
+.summary {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   text-align: center;
+   left: 30%;
+   width: 40%;
+}
+
+.summary p {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+}
+
+.summary p abbr {
+   text-decoration: none;
+   padding-left: .1em;
+}
+
+.summary a {
+   text-shadow: 0 0 10px #f0ffe8, 0 0 30px #f0ffe8;
+   text-decoration: none;
+   color: var(--col1);
+
+}
+
+/* Center Aligned, addded background transparent and add dropshadow  */
+.preamble {
+   background-image: url(fire-icon-01.png);
+   background-size: 80em;
+   background-repeat: no-repeat;
+   background-position: center top;
+   animation-name: flame;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+
+   margin: 5%;
+   position: relative;
+   width: 40%;
+   text-align: justify;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   left: 24%;
+   top: 1;
+   background-color: rgba(0, 0, 0, 0.3);
+   padding: 2em;
+   border-radius: 1em;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   text-align: center;
+}
+/* Added animation which changes scale of the whole element */
+@keyframes flame {
+   0% {
+      transform: scale(1.1);
+   }
+
+   50% {
+      transform: scale(1.2);
+      ;
+   }
+
+   75% {
+      transform: scale(1.3);
+   }
+
+   100% {
+      transform: scale(1.4);
+   }
+}
+
+.preamble h3 {
+   font-family: var(--heading);
+   font-size: 2rem;
+   color: var(--col1);
+   font-weight: 100;
+}
+
+.preamble p {
+   font-family: var(--bodytext);
+   font-size: 1rem;
+   color: var(--col1);
+}
+
+.main {
+   background-image: url(Background3.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+
+}
+
+/* Assigned grid to the content */
+.explanation {
+   padding: 20% 10%;
+   display: grid;
+   grid-template-areas:
+      "a b"
+      "a c";
+
+}
+
+.explanation h3 {
+   grid-area: a;
+   margin-right: 2em;
+   font-family: var(--heading);
+   font-size: 2rem;
+   color: var(--col1);
+   font-weight: 100;
+
+}
+
+.explanation p:first-child {
+   grid-area: b;
+
+}
+
+.explanation p:last-child {
+   grid-area: c;
+}
+
+.explanation p {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: #16161a;
+   font-weight: 500;
+   padding: 15px;
+}
+
+.participation {
+   padding: 20% 10%;
+   display: grid;
+   grid-template-areas:
+      "a b"
+      "a c"
+      "a d";
+}
+
+.participation h3 {
+   grid-area: a;
+   margin-right: 2em;
+   font-family: var(--heading);
+   font-size: 2rem;
+   color: var(--col1);
+   font-weight: 100;
+}
+
+.participation p:first-child {
+   grid-area: b;
+
+}
+
+.participation p:nth-child(2) {
+   grid-area: c;
+
+}
+
+.participation p:last-child {
+   grid-area: d;
+}
+
+.participation p {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+   font-weight: 500;
+   padding: 15px;
+}
+
+.participation a {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+}
+
+.benefits {
+   padding: 2em;
+   margin: 2% 0;
+   margin-top: 1em;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.benefits h3 {
+   font-family: var(--heading);
+   font-size: 2rem;
+   color: var(--col1);
+   font-weight: 100;
+}
+
+.benefits p {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+   width: 50%;
+}
+
+.benefits a {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+}
+
+.requirements {
+   padding: 2em;
+   margin: 2% 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.requirements h3 {
+   font-family: var(--heading);
+   font-size: 2rem;
+   color: var(--col1);
+   font-weight: 100;
+}
+
+.requirements p {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+   width: 50%;
+}
+
+.requirements a {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+}
+
+footer {
+   padding: 2em;
+   margin: 2% 0;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: 2em;
+}
+
+footer a {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+}
+
+/*Center Aligned, addded background transparent and add dropshadow  */
+.design-selection {
+   margin: 5%;
+   position: relative;
+   width: 40%;
+   text-align: justify;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   left: 24%;
+   top: 1;
+   background-color: rgba(0, 0, 0, 0.3);
+   padding: 2em;
+   border-radius: 1em;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   text-align: center;
+}
+
+.design-selection h3 {
+   font-family: var(--heading);
+   font-size: 2rem;
+   color: var(--col1);
+   font-weight: 100;
+}
+
+.design-selection ul {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 2em;
+}
+
+.design-selection li {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+   display: flex;
+   flex-direction: column;
+}
+
+.design-selection a {
+   margin: 4%;
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+   font-weight: 600;
+   text-decoration: none;
+   padding: 1.2em;
+   border-radius: 1em;
+}
+
+.design-selection a:first-child {
+   margin-top: 20%;
+   background-color: #537C6A;
+}
+
+.design-selection a:last-child {
+   margin-top: 5%;
+   background-color: #537C6A;
+}
+
+/*Center Aligned, addded background transparent and add dropshadow  */
+.design-archives {
+   margin: 5%;
+   position: relative;
+   width: 40%;
+   text-align: justify;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   left: 24%;
+   top: 1;
+   background-color: #537C6A;
+   padding: 2em;
+   border-radius: 1em;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   text-align: center;
+   animation-name: changecolor;
+   animation-duration: 15s;
+   animation-iteration-count: infinite;
+}
+
+/* Added animation to change background color */
+@keyframes changecolor {
+   0% {
+      background:#282c27;
+   }
+
+   50% {
+      background-color: #537C6A;
+   }
+
+   75% {
+      background: #282c27;
+   }
+
+   100% {
+      background:#537C6A;
+   }
+}
+
+.design-archives h3 {
+   font-family: var(--heading);
+   font-size: 2rem;
+   color: var(--col1);
+   font-weight: 100;
+}
+
+.design-archives ul {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 2em;
+}
+
+.design-archives li {
+   margin: 5% 0;
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+
+}
+
+.design-archives a {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col1);
+   font-weight: 600;
+   text-decoration: none;
+}
+
+.zen-resources {
+   margin: 5%;
+   position: relative;
+   width: 40%;
+   text-align: justify;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   left: 24%;
+   top: 1;
+   background-color: #cddfc3;
+   padding: 2em;
+   border-radius: 1em;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   text-align: center;
+}
+
+.zen-resources h3 {
+   font-family: var(--heading);
+   font-size: 2rem;
+   color: var(--col3);
+   font-weight: 100;
+}
+
+.zen-resources ul {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 2em;
+}
+
+.zen-resources li {
+   margin: 5% 0;
+}
+
+.zen-resources a {
+   font-family: var(--bodytext);
+   font-size: 1.2rem;
+   color: var(--col3);
+   font-weight: 600;
+   text-decoration: none;
+}
